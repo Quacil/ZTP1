@@ -6,7 +6,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
-@WebFilter(filterName = "UserFilter", servletNames = {"DashboardServlet"})
+@WebFilter(filterName = "UserFilter", servletNames = {"DashboardServlet"}, urlPatterns = {"/dashboard"})
 public class UserFilter implements Filter {
     private ServletContext context;
 
@@ -25,5 +25,4 @@ public class UserFilter implements Filter {
     public void init(FilterConfig config) throws ServletException {
         context = config.getServletContext();
     }
-
 }

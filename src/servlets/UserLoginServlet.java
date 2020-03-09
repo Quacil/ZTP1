@@ -34,7 +34,7 @@ public class UserLoginServlet extends HttpServlet {
             return;
         }
         ServletContext context = getServletContext();
-        context.setAttribute("user", login);
+        context.setAttribute("user", user);
         response.sendRedirect("/dashboard");
     }
 

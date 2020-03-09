@@ -38,7 +38,7 @@ public class AdminLoginServlet extends HttpServlet {
             response.sendError(403);
         }
         ServletContext context = getServletContext();
-        context.setAttribute("user", login);
+        context.setAttribute("user", user);
         response.sendRedirect("/admin");
     }
 

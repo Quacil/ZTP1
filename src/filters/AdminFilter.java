@@ -7,7 +7,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
-@WebFilter(filterName = "AdminFilter", servletNames = {"AdminServlet"})
+@WebFilter(filterName = "AdminFilter", urlPatterns = {"/admin"}, servletNames = {"AdminServlet"})
 public class AdminFilter implements Filter {
     private ServletContext context;
 
