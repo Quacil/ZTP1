@@ -17,8 +17,30 @@
     <c:forEach items="${library}" var="book">
         <li>
             <c:out value="${book.toString()}"></c:out>
+            <form method="post" action="library">
+                <input type="hidden" value="delete" name="action">
+                <input type="hidden" value="${book.id}" name="id">
+                <input type="submit" value="Delete">
+            </form>
         </li>
     </c:forEach>
 </ul>
+<h2>Add new book</h2>
+<form method="post" action="library">
+    <input type="hidden" value="add" name="action">
+    <label>
+        Author:
+        <input type="text" name="author">
+    </label>
+    <label>
+        Title:
+        <input type="text" name="title">
+    </label>
+    <label>
+        Date published:
+        <input type="date" name="publishedOn">
+    </label>
+    <input type="submit">
+</form>
 </body>
 </html>
